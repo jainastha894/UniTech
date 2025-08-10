@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Customer Messages | IndustrialTech Manufacturing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/messages.css">
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl sm:text-2xl font-bold text-gray-900">uniTech</h1>
+                        <p class="text-xs sm:text-sm text-gray-500">Engineering Works</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2 sm:space-x-4">
+                    <div class="relative">
+                        <span class="bg-red-500 text-white text-xs rounded-full px-2 py-1">
+                            <%= newMessages %> New
+                        </span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
+                            <span class="text-sm font-medium text-gray-700">AD</span>
+                        </div>
+                        <span class="text-sm font-medium text-gray-700 hidden sm:inline">Admin</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Dashboard Header -->
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Customer Messages</h2>
+            <p class="text-gray-600">Manage and respond to customer inquiries</p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
+            <div class="bg-white rounded-lg shadow p-4 sm:p-6">
+                <div class="flex items-center">
+                    <div class="p-2 bg-blue-100 rounded-lg">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="ml-3 sm:ml-4">
+                        <p class="text-xs sm:text-sm font-medium text-gray-600">Total Messages</p>
+                        <p class="text-xl sm:text-2xl font-bold text-gray-900">
+                            <%= totalMessages %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-4 sm:p-6">
+                <div class="flex items-center">
+                    <div class="p-2 bg-yellow-100 rounded-lg">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-600" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-3 sm:ml-4">
+                        <p class="text-xs sm:text-sm font-medium text-gray-600">Pending</p>
+                        <p class="text-xl sm:text-2xl font-bold text-gray-900">
+                            <%= newMessages %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-lg shadow p-4 sm:p-6">
+                <div class="flex items-center">
+                    <div class="p-2 bg-purple-100 rounded-lg">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="ml-3 sm:ml-4">
+                        <p class="text-xs sm:text-sm font-medium text-gray-600">Today</p>
+                        <p class="text-xl sm:text-2xl font-bold text-gray-900">
+                            <%= todayCount %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters and Search -->
+        <div class="bg-white rounded-lg shadow mb-6 p-6">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
+                <div class="flex flex-wrap gap-2 mb-4 lg:mb-0">
+
+                    <button id="all"
+                        class="filter-btn px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                        onclick="window.location.href='/messages'">All Messages</button>
+                    <button id="today"
+                        class="filter-btn px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                        onclick="window.location.href='/messages?filter=today'">Today</button>
+                    <button id="new"
+                        class="filter-btn px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                        onclick="window.location.href='/messages?filter=new'">New</button>
+                    <button id="replied"
+                        class="filter-btn px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                        onclick="window.location.href='/messages?filter=replied'">Replied</button>
+                    <button id="yesterday"
+                        class="filter-btn px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                        onclick="window.location.href='/messages?filter=yesterday'">Yesterday</button>
+                    <button id="week"
+                        class="filter-btn px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                        onclick="window.location.href='/messages?filter=week'">This week</button>
+                    <button id="month"
+                        class="filter-btn px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                        onclick="window.location.href='/messages?filter=month'">This month</button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Messages List -->
+        <div class="space-y-4" id="messagesList">
+            <!-- Messages -->
+            <% messages.forEach(message=> { %>
+                <div class="message-card bg-white rounded-lg shadow border-l-4 border-red-500" data-status="new"
+                    data-inquiry="technical" data-date="today">
+                    <div class="p-4 sm:p-6">
+                        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between space-y-4 lg:space-y-0">
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-2 mb-3">
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs font-medium">
+                                        <%= message.category %>
+                                    </span>
+
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-600 mb-3">
+                                    <span><strong>Name:</strong>
+                                        <%= message.full_name %>
+                                    </span>
+                                    <span><strong>Company:</strong>
+                                        <%= message.company_name %>
+                                    </span>
+                                    <span><strong>Email:</strong>
+                                        <%= message.email %>
+                                    </span>
+                                    <span><strong>Phone:</strong>
+                                        <%= message.phone %>
+                                    </span>
+                                </div>
+                                <div class="mb-3">
+                                    <span class="text-sm text-gray-500"><strong>Type of Inquiry:</strong>
+                                        <%= message.inquiry %>
+                                    </span>
+                                </div>
+                                <div class="bg-gray-50 p-3 sm:p-4 rounded-lg">
+                                    <p class="text-gray-700 text-sm sm:text-base">
+                                        <%= message.message %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-row lg:flex-col space-x-2 lg:space-x-0 lg:space-y-2 lg:ml-4">
+                                <button
+                                    class="toggle-reply flex items-center space-x-2 bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors cursor-pointer"
+                                    data-id="<%= message.id %>">
+                                    <% if (message.replied) { %>
+                                        Replied
+                                        <% } else { %>
+                                            Reply
+                                            <% } %>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+
+        </div>
+    </div>
+    <script>
+        function applyFilters() {
+            const filter = document.getElementById('dateFilter').value;
+            if (filter) {
+                window.location.href = `/messages?filter=${encodeURIComponent(filter)}`;
+            }
+        }
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".toggle-reply").forEach(button => {
+        button.addEventListener("click", async () => {
+            const messageId = button.getAttribute("data-id");
+
+            try {
+                const res = await fetch(`/messages/${messageId}/toggle-reply`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+
+                const data = await res.json();
+
+                if (data.success) {
+                    button.textContent = data.replied ? "Replied" : "Reply";
+                    window.location.reload(); // Reload to reflect changes
+                } else {
+                    alert("Failed to update status");
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Error updating status");
+            }
+        });
+    });
+});
+
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'96b7176a520da841',t:'MTc1NDU3MzAzNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>

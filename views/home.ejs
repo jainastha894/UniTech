@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uniTech Engineering Works</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/home.css">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <%- include("partials/header.ejs") %>
+
+        <!-- Hero Section -->
+        <section
+            class="relative hero-bg min-h-screen flex items-center justify-center text-white pt-20 overflow-hidden">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+
+            <!-- Decorative Floating Circles -->
+            <div class="absolute top-0 left-0 w-40 h-40 bg-orange-400 rounded-full opacity-30 animate-pulse-slow"></div>
+            <div
+                class="absolute bottom-0 right-0 w-32 h-32 bg-blue-400 rounded-full opacity-20 animate-pulse-slow delay-500">
+            </div>
+
+            <!-- Main Content -->
+            <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h1
+                    class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 sm:mb-6 animate-fade-in-up delay-[0ms] leading-tight tracking-wide">
+                    UniTech Engineering <br>
+                    <span class="text-orange-400 animate-fade-in-up delay-[200ms]">Works</span>
+                </h1>
+                <p
+                    class="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 animate-fade-in-up delay-[400ms] px-2">
+                    Reliable Converying Systems for Loading/Unloading
+                </p>
+                <div class="animate-fade-in-up delay-[600ms]">
+                    <button onclick="window.location.href='/our-products'"
+                        class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold shadow-xl transition duration-300 ease-in-out hover:scale-105 relative overflow-hidden group">
+                        <span class="relative z-10">Our Products</span>
+                        <span
+                            class="absolute left-0 top-0 w-full h-full bg-blue-100 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out scale-150 group-hover:scale-100"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Services Section -->
+        <section class="py-12 sm:py-16 lg:py-20 bg-blue-400>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+                        Best Conveyor Systems for Efficient Loading and Unloading
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <div class="text-center p-6 sm:p-8 rounded-lg hover:shadow-xl transition-shadow">
+                        <div
+                            class="machine-icon w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center bg-gray-200 rounded-full">
+                            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-black-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Dedicated Customer Services</h3>
+                        <p class="text-sm sm:text-base text-gray-600">Customer Satisfaction is our primary purpose</p>
+                    </div>
+
+                    <div class="text-center p-6 sm:p-8 rounded-lg hover:shadow-xl transition-shadow">
+                        <div
+                            class="machine-icon w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center bg-gray-200 rounded-full">
+                            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-black-600 mx-auto block overflow-visible"
+                                fill="none" stroke="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2"
+                                    stroke="currentColor" fill="none" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Quality Assurance</h3>
+                        <p class="text-sm sm:text-base text-gray-600">Rigorous testing and quality control processes
+                            ensure reliable performance</p>
+                    </div>
+                    <div
+                        class="text-center p-6 sm:p-8 rounded-lg hover:shadow-xl transition-shadow sm:col-span-2 lg:col-span-1">
+                        <div
+                            class="machine-icon w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center bg-gray-200 rounded-full">
+                            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-black-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Best Wholesale Price</h3>
+                        <p class="text-sm sm:text-base text-gray-600">Best prices you will not get anywhere</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-12 sm:py-16 lg:py-20 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+                    <div class="lg:order-1">
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+                            24+ Years of Industrial Excellence
+                        </h2>
+                        <p class="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+                            We've been at the forefront of Conveyor machine manufacturing, delivering innovative
+                            solutions that drive productivity and efficiency across various industries.
+                        </p>
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full mr-3 sm:mr-4 flex-shrink-0"></div>
+                                <span class="text-sm sm:text-base text-gray-700">Advanced Conveyor Systems</span>
+                                    
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full mr-3 sm:mr-4 flex-shrink-0"></div>
+                                <span class="text-sm sm:text-base text-gray-700">Top quality standards</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full mr-3 sm:mr-4 flex-shrink-0"></div>
+                                <span class="text-sm sm:text-base text-gray-700">Large service network</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:order-2 bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+                        <div class="grid grid-cols-2 gap-4 sm:gap-6 text-center">
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-bold text-blue-600 mb-1 sm:mb-2"
+                                    data-target="1">0</div>
+                                <div class="text-xs sm:text-sm text-gray-600">Company Branch</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-bold text-blue-600 mb-1 sm:mb-2" data-target="24">
+                                    0+</div>
+                                <div class="text-xs sm:text-sm text-gray-600">Years Experience</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-bold text-blue-600 mb-1 sm:mb-2" data-target="6">
+                                    0</div>
+                                <div class="text-xs sm:text-sm text-gray-600">No of Staff</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-bold text-blue-600 mb-1 sm:mb-2" data-target="99">
+                                    0%</div>
+                                <div class="text-xs sm:text-sm text-gray-600">Client Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Customers Section -->
+        <section class="py-12 sm:py-16 lg:py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Trusted Customers</h2>
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+                        Leading companies worldwide trust our Converying solutions
+                    </p>
+                </div>
+
+                <div class="overflow-hidden">
+                    <div class="flex animate-scroll space-x-6 sm:space-x-8">
+                        <% const customers=[ "Standford" , "Nestor" , "UltraTech Cement" , "Cooper"
+                            , "Combitic" , "Domino's Pizza" , "Unicure" , "Patanjali", "Pan", "FDL","Stella","Today Tea Limited","Kaizen","Staywell","Bakson's Homeopathy","Alston Gerrard","Jiva Ayurveda" ]; %>
+                            <div class="overflow-hidden w-full">
+                                <div class="flex animate-scroll space-x-6 sm:space-x-8" style="width: max-content;">
+                                    <% for(let repeat=0; repeat<2; repeat++) { %>
+                                        <% customers.forEach(function(name) { %>
+                                            <div
+                                                class="bg-white rounded-lg shadow-md flex items-center justify-center h-16 sm:h-20 lg:h-24 px-6 sm:px-8 flex-shrink-0">
+                                                <div
+                                                    class="text-sm sm:text-lg lg:text-xl font-bold text-gray-600 whitespace-nowrap">
+                                                    <%= name %>
+                                                </div>
+                                            </div>
+                                            <% }) %>
+                                                <% } %>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Customer Reviews</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        See what our clients say about our industrial solutions
+                    </p>
+                </div>
+
+                <!-- Review Form -->
+                <div class="max-w-2xl mx-auto mb-12">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Share Your Experience</h3>
+                        <form action="/reviews" method="post" id="reviewForm" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input type="text" id="reviewerName" name="reviewerName" placeholder="Your Name"
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <input type="text" id="reviewerCompany" name="reviewerCompany"
+                                    placeholder="Company Name" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div class="flex items-center space-x-2 mb-4">
+                                <span class="text-gray-700">Rating:</span>
+                                <div class="flex space-x-1" id="starRating">
+                                    <button type="button"
+                                        class="star text-2xl text-gray-300 hover:text-yellow-400 transition-colors"
+                                        data-rating="1">★</button>
+                                    <button type="button"
+                                        class="star text-2xl text-gray-300 hover:text-yellow-400 transition-colors"
+                                        data-rating="2">★</button>
+                                    <button type="button"
+                                        class="star text-2xl text-gray-300 hover:text-yellow-400 transition-colors"
+                                        data-rating="3">★</button>
+                                    <button type="button"
+                                        class="star text-2xl text-gray-300 hover:text-yellow-400 transition-colors"
+                                        data-rating="4">★</button>
+                                    <button type="button"
+                                        class="star text-2xl text-gray-300 hover:text-yellow-400 transition-colors"
+                                        data-rating="5">★</button>
+                                </div>
+                            </div>
+                            <textarea id="reviewText" rows="4"
+                                placeholder="Share your experience with our products and services..." required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                            <button type="submit"
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
+                                Submit Review
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Mobile Reviews (Scrollable) - Visible only on mobile -->
+                <div class="block sm:hidden">
+                    <div class="space-y-4 max-h-96 overflow-y-auto px-4" id="mobileReviewsContainer">
+                        <!-- Sample Reviews for Mobile -->
+                        <% reviews.forEach(function(review) { %>
+                            <div class="review-card p-4 rounded-lg shadow-lg">
+                                <div class="flex items-center mb-3">
+                                    <div
+                                        class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">
+                                        <span class="text-sm"></span>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <h4 class="font-bold text-gray-900 text-sm">
+                                            <%= review.name %>
+                                        </h4>
+                                        <p class="text-xs text-gray-600">
+                                            <%= review.company %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex mb-2">
+                                    <% for (let i=1; i <=5; i++) { %>
+                                        <% if (i <=review.rating) { %>
+                                            <span class="text-yellow-400 text-sm">★</span>
+                                            <% } else { %>
+                                                <span class="text-gray-300 text-sm">★</span>
+                                                <% } %>
+                                                    <% } %>
+                                </div>
+
+                                <p class="text-gray-700 text-sm">
+                                    <%= review.experience %>
+                                </p>
+                            </div>
+                            <% }) %>
+                    </div>
+                </div>
+
+                <!-- Desktop Reviews Carousel - Hidden on mobile -->
+                <div class="hidden sm:block relative px-4 sm:px-8 lg:px-12">
+                    <!-- Carousel Container -->
+                    <div class="overflow-hidden">
+                        <div id="reviewsCarousel" class="flex transition-transform duration-500 ease-in-out">
+                            <!-- Slide 1 -->
+                            <div class="w-full flex-shrink-0">
+                                <div id="reviewsContainer"
+                                    class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+                                    <!-- Sample Reviews -->
+                                    <% reviews.forEach(function(review) { %>
+                                        <div class="review-card p-4 sm:p-6 rounded-lg shadow-lg">
+                                            <div class="flex items-center mb-3 sm:mb-4">
+                                                <div
+                                                    class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3 sm:mr-4 flex-shrink-0">
+                                                    <span class="text-sm sm:text-base"></span>
+                                                </div>
+                                                <div class="min-w-0">
+                                                    <h4 class="font-bold text-gray-900 text-sm sm:text-base truncate">
+                                                        <%= review.name %>
+                                                    </h4>
+                                                    <p class="text-xs sm:text-sm text-gray-600 truncate">
+                                                        <%= review.company %>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="flex mb-2 sm:mb-3">
+                                                <% for (let i=1; i <=5; i++) { %>
+                                                    <% if (i <=review.rating) { %>
+                                                        <span class="text-yellow-400 text-sm">★</span>
+                                                        <% } else { %>
+                                                            <span class="text-gray-300 text-sm">★</span>
+                                                            <% } %>
+                                                                <% } %>
+                                            </div>
+                                            <p class="text-gray-700 text-sm sm:text-base">
+                                                <%= review.experience %>
+                                            </p>
+                                        </div>
+                                        <% }) %>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <button id="prevBtn"
+                            class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-2 sm:p-3 rounded-full shadow-lg transition-colors">
+                            <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7">
+                                </path>
+                            </svg>
+                        </button>
+                        <button id="nextBtn"
+                            class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-2 sm:p-3 rounded-full shadow-lg transition-colors">
+                            <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </button>
+
+                        <!-- Dots Indicator -->
+                        <div id="dotsContainer" class="flex justify-center mt-6 sm:mt-8 space-x-2">
+                            <button class="dot w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-blue-600 transition-colors"
+                                data-slide="0"></button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Footer -->
+        <%- include("partials/footer.ejs") %>
+
+            <script>
+                // Star Rating System
+                let selectedRating = 0;
+                const stars = document.querySelectorAll('.star');
+
+                stars.forEach(star => {
+                    star.addEventListener('click', function () {
+                        selectedRating = parseInt(this.dataset.rating);
+                        updateStars();
+                    });
+
+                    star.addEventListener('mouseover', function () {
+                        const rating = parseInt(this.dataset.rating);
+                        highlightStars(rating);
+                    });
+                });
+
+                document.getElementById('starRating').addEventListener('mouseleave', function () {
+                    updateStars();
+                });
+
+                function updateStars() {
+                    stars.forEach((star, index) => {
+                        if (index < selectedRating) {
+                            star.classList.remove('text-gray-300');
+                            star.classList.add('text-yellow-400');
+                        } else {
+                            star.classList.remove('text-yellow-400');
+                            star.classList.add('text-gray-300');
+                        }
+                    });
+                }
+
+                function highlightStars(rating) {
+                    stars.forEach((star, index) => {
+                        if (index < rating) {
+                            star.classList.remove('text-gray-300');
+                            star.classList.add('text-yellow-400');
+                        } else {
+                            star.classList.remove('text-yellow-400');
+                            star.classList.add('text-gray-300');
+                        }
+                    });
+                }
+
+
+
+                // Reviews Carousel
+                let currentSlide = 0;
+                let totalSlides = 1;
+                let reviewsData = [];
+
+                function createReviewSlides() {
+                    const carousel = document.getElementById('reviewsCarousel');
+                    const dotsContainer = document.getElementById('dotsContainer');
+
+                    // Clear existing content
+                    carousel.innerHTML = '';
+                    dotsContainer.innerHTML = '';
+
+                    // Calculate reviews per slide based on screen size
+                    let reviewsPerSlide;
+                    if (window.innerWidth < 640) {
+                        reviewsPerSlide = 1; // Mobile: 1 review per slide
+                    } else if (window.innerWidth < 1024) {
+                        reviewsPerSlide = 2; // Tablet: 2 reviews per slide
+                    } else if (window.innerWidth < 1280) {
+                        reviewsPerSlide = 3; // Laptop: 3 reviews per slide
+                    } else {
+                        reviewsPerSlide = 4; // Desktop: 4 reviews per slide
+                    }
+
+                    totalSlides = Math.ceil(reviewsData.length / reviewsPerSlide);
+
+                    // Create slides
+                    for (let i = 0; i < totalSlides; i++) {
+                        const slide = document.createElement('div');
+                        slide.className = 'w-full flex-shrink-0';
+
+                        const grid = document.createElement('div');
+                        // Mobile gets single column, others get responsive grid
+                        if (window.innerWidth < 640) {
+                            grid.className = 'flex justify-center';
+                        } else {
+                            grid.className = 'grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6';
+                        }
+
+                        // Add reviews per slide
+                        for (let j = 0; j < reviewsPerSlide; j++) {
+                            const reviewIndex = i * reviewsPerSlide + j;
+                            if (reviewIndex < reviewsData.length) {
+                                const reviewClone = reviewsData[reviewIndex].cloneNode(true);
+                                // For mobile, ensure proper width
+                                if (window.innerWidth < 640) {
+                                    reviewClone.className = reviewClone.className + ' w-full max-w-sm';
+                                }
+                                grid.appendChild(reviewClone);
+                            }
+                        }
+
+                        slide.appendChild(grid);
+                        carousel.appendChild(slide);
+
+                        // Create dot indicator
+                        const dot = document.createElement('button');
+                        dot.className = `dot w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${i === 0 ? 'bg-blue-600' : 'bg-gray-300'}`;
+                        dot.setAttribute('data-slide', i);
+                        dot.addEventListener('click', () => goToSlide(i));
+                        dotsContainer.appendChild(dot);
+                    }
+                }
+
+                function goToSlide(slideIndex) {
+                    currentSlide = slideIndex;
+                    const carousel = document.getElementById('reviewsCarousel');
+                    carousel.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+                    // Update dots
+                    document.querySelectorAll('.dot').forEach((dot, index) => {
+                        if (index === slideIndex) {
+                            dot.classList.remove('bg-gray-300');
+                            dot.classList.add('bg-blue-600');
+                        } else {
+                            dot.classList.remove('bg-blue-600');
+                            dot.classList.add('bg-gray-300');
+                        }
+                    });
+                }
+
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    goToSlide(currentSlide);
+                }
+
+                function prevSlide() {
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    goToSlide(currentSlide);
+                }
+
+                // Initialize carousel with sample reviews
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Get initial reviews
+                    const initialReviews = document.querySelectorAll('#reviewsContainer .review-card');
+                    reviewsData = Array.from(initialReviews);
+
+                    createReviewSlides();
+
+                    // Add event listeners for navigation
+                    document.getElementById('nextBtn').addEventListener('click', nextSlide);
+                    document.getElementById('prevBtn').addEventListener('click', prevSlide);
+                });
+
+
+
+                document.getElementById('reviewForm').addEventListener('submit', async function (e) {
+                    e.preventDefault();
+
+                    const name = document.getElementById('reviewerName').value;
+                    const company = document.getElementById('reviewerCompany').value;
+                    const reviewText = document.getElementById('reviewText').value;
+
+                    if (selectedRating === 0) {
+                        alert('Please select a rating!');
+                        return;
+                    }
+
+                    // Send review to backend
+                    try {
+                        const response = await fetch('/reviews', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                reviewerName: name,
+                                reviewerCompany: company,
+                                reviewText: reviewText,
+                                rating: selectedRating
+                            })
+                        });
+
+                        if (response.ok) {
+                            alert('Thank you for your review! It has been posted successfully.');
+                            document.getElementById('reviewForm').reset();
+                            selectedRating = 0;
+                            updateStars();
+                        } else {
+                            alert('Error submitting review. Please try again.');
+                        }
+                    } catch (err) {
+                        alert('Network error. Please try again.');
+                    }
+                });
+
+                // Smooth scrolling for navigation links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+
+                // // Contact form submission
+                // document.querySelector('footer form').addEventListener('submit', function(e) {
+                //     e.preventDefault();
+                //     alert('Thank you for your message! We will get back to you soon.');
+                //     this.reset();
+                // });
+
+                // Animated Counter
+                function animateCounter(element, target, suffix = '') {
+                    let current = 0;
+                    const increment = target / 60; // Adjust speed by changing divisor
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        element.textContent = Math.floor(current) + suffix;
+                    }, 25);
+                }
+
+                // Intersection Observer for counter animation
+                const observerOptions = {
+                    threshold: 0.3,
+                    rootMargin: '0px'
+                };
+
+                let hasAnimated = false;
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !hasAnimated) {
+                            hasAnimated = true;
+                            const counters = document.querySelectorAll('[data-target]');
+                            counters.forEach(counter => {
+                                const target = parseInt(counter.dataset.target);
+                                const suffix = counter.textContent.includes('%') ? '%' : '+';
+                                animateCounter(counter, target, suffix);
+                            });
+                        }
+                    });
+                }, observerOptions);
+
+                // Start observing the stats section
+                document.addEventListener('DOMContentLoaded', function () {
+                    const statsSection = document.querySelector('.grid.grid-cols-2.gap-4.sm\\:gap-6.text-center');
+                    if (statsSection) {
+                        observer.observe(statsSection);
+                    }
+                });
+
+
+
+                // Handle window resize for carousel
+                window.addEventListener('resize', function () {
+                    if (reviewsData.length > 0) {
+                        createReviewSlides();
+                        goToSlide(0);
+                    }
+                });
+            </script>
+            <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'96ac3c5c60c70b24',t:'MTc1NDQ1OTIwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>

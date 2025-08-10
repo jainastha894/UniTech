@@ -1,0 +1,172 @@
+    /* HERO SECTION */
+.hero-bg {
+  background-image: url('/images/heroimg.jpg'); /* Update path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  animation: heroZoom 18s ease-in-out infinite alternate;
+  overflow: hidden;
+}
+
+/* Curved top using ::before pseudo-element */
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #1a1a1a; /* Match your site's dark background */
+  border-bottom-left-radius: 100% 100px;
+  border-bottom-right-radius: 100% 100px;
+  z-index: 2;
+}
+
+@keyframes heroZoom {
+  0% { background-size: 100% 100%; }
+  100% { background-size: 110% 110%; }
+}
+
+/* Floating Circles Animation */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+@keyframes floatX {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(30px); }
+}
+.animate-pulse-slow {
+  animation: floatY 4s ease-in-out infinite;
+}
+.animate-pulse-slow.delay-500 {
+  animation-delay: 2s;
+  animation-name: floatX;
+}
+
+/* HERO TEXT ANIMATION */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(.4,0,.2,1) both;
+}
+
+/* BUTTON HOVER EFFECT */
+.group:hover .relative.z-10 {
+  color: #fff;
+  transition: color 0.3s;
+}
+.group:hover .absolute.bg-blue-100 {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+/* SERVICES ICONS */
+.machine-icon {
+  background: linear-gradient(135deg, #e0e7ef 0%, #c7d2fe 100%);
+  border-radius: 50%;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(59,130,246,0.10);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.machine-icon:hover {
+  transform: scale(1.08) rotate(-6deg);
+  box-shadow: 0 16px 32px rgba(59,130,246,0.18);
+}
+
+/* SERVICES CARD HOVER */
+.text-center.p-6:hover, .text-center.p-8:hover {
+  background: linear-gradient(120deg, #f0f9ff 60%, #e0f2fe 100%);
+  box-shadow: 0 8px 32px rgba(59,130,246,0.10);
+  transform: translateY(-6px) scale(1.03);
+  transition: all 0.3s;
+}
+
+/* ABOUT SECTION BULLETS */
+.w-2.h-2.bg-blue-600 {
+  box-shadow: 0 0 8px #3b82f6;
+}
+
+/* COUNTER ANIMATION */
+.text-blue-600[data-target] {
+  transition: color 0.4s, text-shadow 0.4s;
+}
+.text-blue-600[data-target]:not(:empty) {
+  color: #2563eb;
+  text-shadow: 0 2px 12px #93c5fd;
+}
+
+/* TRUSTED CUSTOMERS SCROLL */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll {
+  animation: scroll 60s linear infinite;
+  width: max-content;
+  min-width: 100%;
+  display: flex;
+}
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+.bg-white.rounded-lg.shadow-md {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.bg-white.rounded-lg.shadow-md:hover {
+  box-shadow: 0 8px 32px rgba(59,130,246,0.12);
+  transform: scale(1.07) rotate(-2deg);
+}
+
+/* REVIEW CARDS */
+.review-card {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  border-left: 4px solid #0ea5e9;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.review-card:hover {
+  box-shadow: 0 8px 32px rgba(14, 165, 233, 0.18);
+  transform: scale(1.03) rotate(-2deg);
+}
+
+/* DOTS INDICATOR */
+.dot {
+  transition: background 0.3s, transform 0.3s;
+}
+.dot.bg-blue-600 {
+  transform: scale(1.2);
+  box-shadow: 0 0 8px #3b82f6;
+}
+
+/* STAR RATING ANIMATION */
+.star {
+  transition: color 0.2s, transform 0.2s;
+}
+.star:hover, .star.text-yellow-400 {
+  transform: scale(1.2) rotate(-10deg);
+}
+
+/* FORM FOCUS EFFECTS */
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #3b82f6;
+  border-color: #3b82f6;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+/* RESPONSIVE TWEAKS */
+@media (max-width: 640px) {
+  .hero-content h1 {
+    font-size: 2.2rem !important;
+  }
+  .hero-content p {
+    font-size: 1.1rem !important;
+  }
+}

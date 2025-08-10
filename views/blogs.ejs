@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uniTech Engineering Works - Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/blog.css">
+    
+</head>
+<body class="bg-gray-50 font-sans">
+
+
+<%- include("partials/header.ejs") %>
+
+    <!-- Animated Hero Section -->
+    <section class="bg-gradient-to-r from-yellow-600 to-orange-700 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 animate-fadeInUp">Industry Insights & Innovation</h2>
+            <p class="text-lg sm:text-xl mb-8 animate-fadeInUp px-4" style="animation-delay: 0.2s;">Stay updated with the latest in industrial machinery and manufacturing technology</p>
+            <div class="animate-bounce-custom">
+                <svg class="w-8 h-8 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
+            <!-- Blog Posts (Stable) -->
+            <div class="lg:col-span-3">
+                <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">Latest Articles</h3>
+                
+                <!-- Featured Post -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-6 sm:mb-8 hover-lift">
+                    <div class="h-48 sm:h-64 bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center">
+                        <svg class="w-16 sm:w-24 h-16 sm:h-24 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center mb-4 space-y-2 sm:space-y-0">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium w-fit">Manufacturing</span>
+                            <span class="text-gray-500 sm:ml-4 text-sm">March 15, 2024</span>
+                        </div>
+                        <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3">The Future of Automated Manufacturing: AI Integration in Industrial Machinery</h4>
+                        <p class="text-gray-600 mb-4 text-sm sm:text-base">Discover how artificial intelligence is revolutionizing industrial manufacturing processes, improving efficiency, and reducing operational costs across various sectors.</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Regular Posts -->
+                <div class="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover-lift">
+                        <div class="h-40 sm:h-48 bg-gradient-to-r from-green-500 to-teal-600 flex items-center justify-center">
+                            <svg class="w-12 sm:w-16 h-12 sm:h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <div class="flex flex-col sm:flex-row sm:items-center mb-3 space-y-2 sm:space-y-0">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium w-fit">Innovation</span>
+                                <span class="text-gray-500 sm:ml-3 text-sm">March 12, 2024</span>
+                            </div>
+                            <h4 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">Sustainable Manufacturing Practices</h4>
+                            <p class="text-gray-600 mb-4 text-sm sm:text-base">Learn about eco-friendly approaches to industrial production and how modern machinery supports sustainability goals.</p>
+                            <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover-lift">
+                        <div class="h-40 sm:h-48 bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center">
+                            <svg class="w-12 sm:w-16 h-12 sm:h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H19v2h-1.5v.5h-13V4H3V2h1.5C5.33 2 6 2.67 6 3.5V4h12v-.5C18 2.67 18.67 2 19.5 2z"/>
+                            </svg>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <div class="flex flex-col sm:flex-row sm:items-center mb-3 space-y-2 sm:space-y-0">
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium w-fit">Maintenance</span>
+                                <span class="text-gray-500 sm:ml-3 text-sm">March 10, 2024</span>
+                            </div>
+                            <h4 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">Predictive Maintenance Strategies</h4>
+                            <p class="text-gray-600 mb-4 text-sm sm:text-base">Explore how IoT sensors and data analytics are transforming equipment maintenance schedules and reducing downtime.</p>
+                            <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover-lift">
+                        <div class="h-40 sm:h-48 bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center">
+                            <svg class="w-12 sm:w-16 h-12 sm:h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <div class="flex flex-col sm:flex-row sm:items-center mb-3 space-y-2 sm:space-y-0">
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium w-fit">Safety</span>
+                                <span class="text-gray-500 sm:ml-3 text-sm">March 8, 2024</span>
+                            </div>
+                            <h4 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">Industrial Safety Standards 2024</h4>
+                            <p class="text-gray-600 mb-4 text-sm sm:text-base">Updated safety protocols and compliance requirements for modern industrial machinery operations.</p>
+                            <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover-lift">
+                        <div class="h-40 sm:h-48 bg-gradient-to-r from-indigo-500 to-blue-600 flex items-center justify-center">
+                            <svg class="w-12 sm:w-16 h-12 sm:h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/>
+                            </svg>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <div class="flex flex-col sm:flex-row sm:items-center mb-3 space-y-2 sm:space-y-0">
+                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium w-fit">Training</span>
+                                <span class="text-gray-500 sm:ml-3 text-sm">March 5, 2024</span>
+                            </div>
+                            <h4 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">Operator Training Programs</h4>
+                            <p class="text-gray-600 mb-4 text-sm sm:text-base">Best practices for training industrial machinery operators in the digital age with VR and simulation technologies.</p>
+                            <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Animated Sidebar -->
+            <aside class="lg:col-span-1 mt-8 lg:mt-0">
+                
+                <!-- Categories -->
+                <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 mb-6 sm:mb-8 hover-lift">
+                    <h4 class="text-lg sm:text-xl font-bold text-gray-800 mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 flex items-center justify-between text-sm sm:text-base">Manufacturing <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs">12</span></a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 flex items-center justify-between text-sm sm:text-base">Innovation <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs">8</span></a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 flex items-center justify-between text-sm sm:text-base">Safety <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs">15</span></a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 flex items-center justify-between text-sm sm:text-base">Maintenance <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs">6</span></a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 flex items-center justify-between text-sm sm:text-base">Training <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs">4</span></a></li>
+                    </ul>
+                </div>
+
+           
+            </aside>
+        </div>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96a7563de7baa6c9',t:'MTc1NDQwNzgzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

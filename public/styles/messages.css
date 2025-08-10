@@ -1,0 +1,46 @@
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .message-card {
+            transition: all 0.3s ease;
+        }
+        
+        .message-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .priority-high {
+            border-left: 4px solid #ef4444;
+        }
+        
+        .priority-medium {
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .priority-low {
+            border-left: 4px solid #10b981;
+        }
+        
+        .status-new {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+        
+        .status-read {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .status-replied {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+        
+        .filter-btn.active {
+            background-color: #1f2937;
+            color: white;
+        }
