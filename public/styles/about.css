@@ -1,4 +1,4 @@
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
         * {
             font-family: 'Inter', sans-serif;
@@ -55,9 +55,151 @@
         }
         
         .hero-bg {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
             position: relative;
+            background: #181f2a;
             overflow: hidden;
+        }
+        
+        .hero-bg video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            filter: brightness(0.45) saturate(1.1) contrast(1.1);
+        }
+        
+         .animated-conveyor {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: #333;
+            overflow: hidden;
+        }
+
+        .conveyor-belt {
+            width: 200%;
+            height: 20px;
+            background: repeating-linear-gradient(
+                90deg,
+                #555 0px,
+                #555 20px,
+                #777 20px,
+                #777 40px
+            );
+            position: absolute;
+            top: 50px;
+            animation: moveBelt 3s linear infinite;
+        }
+
+        .conveyor-items {
+            position: absolute;
+            top: 30px;
+            width: 200%;
+            height: 60px;
+            animation: moveItems 4s linear infinite;
+        }
+
+        .conveyor-item {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            border-radius: 8px;
+            top: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .floating-gears {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .gear {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            opacity: 0.3;
+            animation: rotate 8s linear infinite;
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5));
+        }
+ .conveyor-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+        }
+
+        .bg-conveyor-belt {
+            width: 200%;
+            height: 30px;
+            background: repeating-linear-gradient(
+                90deg,
+                #444 0px,
+                #444 30px,
+                #666 30px,
+                #666 60px
+            );
+            position: absolute;
+            top: 50%;
+            animation: moveBelt 4s linear infinite;
+        }
+
+        .bg-conveyor-items {
+            position: absolute;
+            top: calc(50% - 20px);
+            width: 200%;
+            height: 70px;
+            animation: moveItems 5s linear infinite;
+        }
+
+        .bg-conveyor-item {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #333, #555);
+            border-radius: 10px;
+            top: 10px;
+            box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+        }
+ 
+   @keyframes moveBelt {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes moveItems {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .hero-bg .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #181f2a 70%, #334155 100%);
+            opacity: 0.8;
+            z-index: 1;
+        }
+        
+        /* Ensure hero content sits above animated layers */
+        .hero-bg > * {
+            position: relative;
+            z-index: 1;
         }
         
         .hero-bg::before {
@@ -67,8 +209,50 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color:" rgba(0, 0, 0, 0.5)";
-            opacity: 0.3;
+            /* User-provided photo as animated background (Ken Burns) */
+            background-image: url('/images/about-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: saturate(1.05) contrast(1.05) brightness(0.8);
+            transform: scale(1.04);
+            animation: kenburns-pan 24s ease-in-out infinite alternate;
+            pointer-events: none;
+        }
+        
+        @keyframes kenburns-pan {
+            0%   { transform: scale(1.04) translate3d(0%, 0%, 0); }
+            50%  { transform: scale(1.09) translate3d(-1.5%, -1%, 0); }
+            100% { transform: scale(1.12) translate3d(-3%, -2%, 0); }
+        }
+        
+        /* Animated aurora gradient for engineering vibe */
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: -20%;
+            background:
+                radial-gradient(600px 600px at 20% 20%, rgba(249, 115, 22, 0.25), transparent 60%),
+                radial-gradient(600px 600px at 80% 30%, rgba(6, 182, 212, 0.22), transparent 60%),
+                radial-gradient(700px 700px at 40% 80%, rgba(167, 139, 250, 0.22), transparent 60%);
+            filter: blur(40px) saturate(1.15);
+            transform: translate3d(0, 0, 0) scale(1);
+            animation: aurora-shift 16s ease-in-out infinite alternate;
+            pointer-events: none;
+        }
+        
+        @keyframes aurora-shift {
+            0% {
+                transform: translate3d(-2%, 0%, 0) rotate(0deg) scale(1.05);
+                filter: blur(42px) saturate(1.1);
+            }
+            50% {
+                transform: translate3d(2%, -3%, 0) rotate(10deg) scale(1.08);
+                filter: blur(48px) saturate(1.2);
+            }
+            100% {
+                transform: translate3d(-1%, 2%, 0) rotate(20deg) scale(1.04);
+                filter: blur(40px) saturate(1.15);
+            }
         }
         
         .floating {
@@ -93,3 +277,33 @@
         .stagger-delay-2 { transition-delay: 0.2s; }
         .stagger-delay-3 { transition-delay: 0.3s; }
         .stagger-delay-4 { transition-delay: 0.4s; }
+        
+        .engineering-bg {
+    position: absolute;
+    inset: 0;
+    background: #181f2a;
+    overflow: hidden;
+    z-index: 0;
+}
+.engineering-bg .box {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #3b82f6 60%, #f59e42 100%);
+    opacity: 0.18;
+    border-radius: 8px;
+    animation: boxMove 8s linear infinite alternate;
+}
+.engineering-bg .box:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+.engineering-bg .box:nth-child(2) { top: 30%; left: 40%; animation-delay: 2s; }
+.engineering-bg .box:nth-child(3) { top: 60%; left: 25%; animation-delay: 1s; }
+.engineering-bg .box:nth-child(4) { top: 80%; left: 70%; animation-delay: 3s; }
+.engineering-bg .box:nth-child(5) { top: 50%; left: 80%; animation-delay: 2.5s; }
+.engineering-bg .box:nth-child(6) { top: 20%; left: 60%; animation-delay: 1.5s; }
+.engineering-bg .box:nth-child(7) { top: 75%; left: 10%; animation-delay: 4s; }
+
+@keyframes boxMove {
+    0% { transform: translateY(0) scale(1) rotate(0deg); }
+    50% { transform: translateY(-30px) scale(1.1) rotate(8deg); }
+    100% { transform: translateY(0) scale(1) rotate(0deg); }
+}
